@@ -48,7 +48,7 @@ Key Steps to Set Up a New Repository on GitHub
 •	Choose a License (Optional): Specifies how others can use your code (e.g., MIT, Apache, GPL).
 6. Create Repository
 •	Click the Create repository button.
-________________________________________
+
 Setting Up the Repository Locally (Optional but Common)
 If you want to work with your repository on your local machine, follow these steps:
 1.	Clone the Repository:
@@ -64,7 +64,7 @@ o	Use git commit -m "Initial commit" to save changes locally.
 bash
 CopyEdit
 git push origin main
-________________________________________
+
 Important Decisions to Make
 1.	Public vs. Private Repository:
 o	Public if it's an open-source or collaborative project.
@@ -87,7 +87,7 @@ Why the README File is Important
 3.	Improves Documentation: Acts as a central place for instructions and guidelines.
 4.	Enhances Collaboration: Ensures team members are on the same page regarding project structure and workflow.
 5.	Boosts Visibility: Well-documented repositories attract more users and contributors, especially in open-source projects.
-________________________________________
+
 What to Include in a Well-Written README
 1.	Project Title & Description
 o	Clearly state the project name.
@@ -106,7 +106,7 @@ o	Specify how others can use, modify, and distribute the project.
 o	Use a standard license like MIT, Apache, or GPL.
 6.	Acknowledgments & Credits
 o	Recognize contributors or reference external resources.
-________________________________________
+
 How a README Contributes to Effective Collaboration
 •	Clear Onboarding: New contributors can quickly understand how to set up and work on the project.
 •	Consistency: Ensures all developers follow the same guidelines and workflows.
@@ -116,6 +116,7 @@ How a README Contributes to Effective Collaboration
 
 ## Compare and contrast the differences between a public repository and a private repository on GitHub. What are the advantages and disadvantages of each, particularly in the context of collaborative projects?
 GitHub offers public and private repositories, each serving different purposes depending on the project’s goals, security needs, and collaboration requirements
+![Image Alt](https://github.com/Powerlearnproject/se-assignment-day-2-git-and-github-Isaac-mutuma/blob/main/PUBLIC%20_%20PRIVATE%20REPOSITORIES.png?raw=true)
  
 Advantages and Disadvantages of Each
 Public Repository
@@ -128,7 +129,7 @@ Public Repository
 •	No privacy—anyone can see and clone the code, including competitors.
 •	Security risks—exposed code can be misused if it contains sensitive information.
 •	Difficult to control contributions from unknown users.
-________________________________________
+
 Private Repository
 ✅ Advantages:
 •	Keeps the codebase confidential, protecting intellectual property.
@@ -139,7 +140,7 @@ Private Repository
 •	Limited to invited collaborators, restricting external contributions.
 •	Some advanced collaboration features may require a paid plan.
 •	Reduced visibility can make it harder to attract external contributors.
-________________________________________
+
 Which One to Choose for Collaborative Projects?
 •	For open-source projects: A public repository is better as it encourages external contributions and community engagement.
 •	For business or internal projects: A private repository is preferable to protect sensitive data and control collaboration.
@@ -155,14 +156,15 @@ A commit is a snapshot of changes made to a project at a specific point in time.
 •	A message describing the changes
 •	A record of the author and timestamp
 Commits help in tracking changes, reverting to previous versions, and collaborating effectively by maintaining a history of modifications in the project.
-________________________________________
+
 Steps to Make Your First Commit to a GitHub Repository
 1. Create a GitHub Repository (If Not Already Done)
 •	Log in to GitHub
 •	Click the + (plus icon) → New repository
 •	Name your repository, choose visibility, and click Create repository
-________________________________________
-2. Set Up Git Locally (If Not Already Installed)
+
+
+3. Set Up Git Locally (If Not Already Installed)
 •	Check if Git is installed:
 bash
 CopyEdit
@@ -173,8 +175,10 @@ bash
 CopyEdit
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
-________________________________________
-3. Clone the Repository (If Already Created on GitHub)
+
+
+
+5. Clone the Repository (If Already Created on GitHub)
 •	Navigate to your desired directory and run:
 bash
 CopyEdit
@@ -184,7 +188,8 @@ cd repository-name
 bash
 CopyEdit
 git init
-________________________________________
+
+
 4. Add Files to Your Repository
 •	Create a file (e.g., README.md):
 bash
@@ -195,26 +200,30 @@ bash
 CopyEdit
 git add README.md
 (You can also add all files using git add .)
-________________________________________
+
+
 5. Commit Your Changes
 •	Create your first commit with a descriptive message:
 bash
 CopyEdit
 git commit -m "Initial commit - Added README file"
-________________________________________
+
+
 6. Connect Your Local Repository to GitHub
 •	If you initialized the repo locally, link it to GitHub:
 bash
 CopyEdit
 git remote add origin https://github.com/your-username/repository-name.git
-________________________________________
+
+
 7. Push Your Commit to GitHub
 •	Upload your changes to the remote repository:
 bash
 CopyEdit
 git push -u origin main
 (Replace main with master if your repo uses the older naming convention.)
-________________________________________
+
+
 How Commits Help in Version Control
 ✅ Track Changes: Every commit records what changed and when.
 ✅ Rollback Capabilities: You can revert to a previous stable version if needed.
@@ -228,7 +237,8 @@ Branches help in:
 ✅ Code Isolation – Ensures new features or bug fixes don’t break the main code until they are tested and merged.
 ✅ Experimentation – Developers can try out new ideas without affecting the stable codebase.
 ✅ Efficient Collaboration – Teams can work on different parts of a project without interference.
-________________________________________
+
+
 Git Branching Workflow
 1. Viewing Existing Branches
 To check available branches:
@@ -236,7 +246,8 @@ bash
 CopyEdit
 git branch
 The active branch is marked with *.
-________________________________________
+
+
 2. Creating a New Branch
 To create a new branch (e.g., feature-xyz):
 bash
@@ -250,20 +261,22 @@ Or use a shortcut to create and switch in one step:
 bash
 CopyEdit
 git checkout -b feature-xyz
-________________________________________
+
 3. Making Changes in the Branch
 Once in the new branch, make necessary changes, then:
 bash
 CopyEdit
 git add .
 git commit -m "Added feature XYZ"
-________________________________________
+
+
 4. Pushing the Branch to GitHub
 To share the branch with others:
 bash
 CopyEdit
 git push origin feature-xyz
-________________________________________
+
+
 5. Merging the Branch into main
 Once the changes are reviewed and tested, merge the branch back into main:
 1.	Switch to main:
@@ -286,14 +299,16 @@ git branch -d feature-xyz
 bash
 CopyEdit
 git push origin main
-________________________________________
+
+
 Using Pull Requests for Merging on GitHub
 Instead of merging directly via Git, teams often use pull requests (PRs):
 1.	Push the branch to GitHub.
 2.	Open the repository on GitHub and go to Pull Requests.
 3.	Click New Pull Request, select feature-xyz → main, and review changes.
 4.	Once approved, click Merge Pull Request.
-________________________________________
+
+ 
 Why Branching is Important for Collaborative Development
 🔹 Prevents Code Conflicts: Each developer works independently, reducing merge conflicts.
 🔹 Keeps main Stable: New features are tested before being merged.
@@ -347,6 +362,7 @@ ________________________________________
 
 What is Forking on GitHub?
 Forking a repository means creating a personal copy of someone else's repository under your GitHub account. This allows you to make changes without affecting the original project.
+![Image Alt](https://github.com/Powerlearnproject/se-assignment-day-2-git-and-github-Isaac-mutuma/blob/main/Forkking%20vs%20cloning.png?raw=true)
  
 When is Forking Useful?
 ✅ Contributing to Open Source Projects – Forking lets you modify a project and submit changes via pull requests.
